@@ -1,0 +1,130 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.head-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("../images/pic1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+}
+
+.head-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.head-text1 {
+  text-align: center;
+  font-size:80px;
+  font-family: cursive;
+  position: relative;
+  color: white;
+  border: 10px solid white;
+  padding: 10px!important;
+}
+
+.head-text2 {
+  text-align: center;
+  font-size:34px;
+  color: white;
+}
+
+.nav {
+	padding: 15px;
+}
+.nav-link {
+	color: white!important;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.container{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+p{
+  margin-bottom: 0px;
+  /*margin-top: 15px;*/
+}
+.card {
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.3);
+  height: 520px;
+  max-width: 460px;
+  margin: 25px;
+  margin-left: 40px;
+  text-align: center;
+  font-family: arial;
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+}
+
+.p-card {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.rating {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+.address {
+  color: grey;
+  font-size: 14px;
+}
+
+.vendor_name {
+  color: black;
+  font-size: 30px;
+}
+
+.about{
+  color: black;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: bold;
+  font-variant: small-caps;
+  font-family: cursive;
+}
+
+.cusine {
+  font-family: cursive;
+}
+
+.card-img {
+  height:300px;
+}
+
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+  font-family: Lucida Sans Unicode;
+  margin-bottom: 0px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+

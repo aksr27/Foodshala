@@ -1,0 +1,134 @@
+<?php include('header.php'); ?>
+
+</head>
+<body>
+	<div class="container-fluid main-container" style="min-height: 660px;">
+		<div class="row">
+			<?php include('sidebar.php'); ?>
+			<!-- <div class="restaurant-image"></div> -->
+			<div class="col-md-2"></div>
+			<div class="main col-md-10">
+				<table class="table">
+				    <thead>
+				      <tr>
+				        <th>Firstname</th>
+				        <th>Lastname</th>
+				        <th>Email</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				        <td>John</td>
+				        <td>Doe</td>
+				        <td>john@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>Mary</td>
+				        <td>Moe</td>
+				        <td>mary@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>July</td>
+				        <td>Dooley</td>
+				        <td>july@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>John</td>
+				        <td>Doe</td>
+				        <td>john@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>Mary</td>
+				        <td>Moe</td>
+				        <td>mary@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>July</td>
+				        <td>Dooley</td>
+				        <td>july@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>John</td>
+				        <td>Doe</td>
+				        <td>john@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>John</td>
+				        <td>Doe</td>
+				        <td>john@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>Mary</td>
+				        <td>Moe</td>
+				        <td>mary@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>July</td>
+				        <td>Dooley</td>
+				        <td>july@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>John</td>
+				        <td>Doe</td>
+				        <td>john@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>Mary</td>
+				        <td>Moe</td>
+				        <td>mary@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>July</td>
+				        <td>Dooley</td>
+				        <td>july@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>John</td>
+				        <td>Doe</td>
+				        <td>john@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>John</td>
+				        <td>Doe</td>
+				        <td>john@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>Mary</td>
+				        <td>Moe</td>
+				        <td>mary@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>July</td>
+				        <td>Dooley</td>
+				        <td>july@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>John</td>
+				        <td>Doe</td>
+				        <td>john@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>Mary</td>
+				        <td>Moe</td>
+				        <td>mary@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>July</td>
+				        <td>Dooley</td>
+				        <td>july@example.com</td>
+				      </tr>
+				      <tr>
+				        <td>John</td>
+				        <td>Doe</td>
+				        <td>john@example.com</td>
+				      </tr>
+				    </tbody>
+				  </table>
+		
+			</div>
+		</div>
+	</div>
+
+<?php include('footer.php'); ?>
+</body>
+</html>
