@@ -1,29 +1,43 @@
-<?php include('header.php'); ?>
-	
+<?php
+	$data = json_decode($data, true);
+	$is_logged_in=$this->session->has_userdata('logged_in');
+ 	$id=$this->session->userdata('id');
+ 	$user_type=$this->session->userdata('user_type');
+ 	$name=$this->session->userdata('name');
+ 	$email=$this->session->userdata('email');
+ 	include('header.php');
+ 	include('login.php');
+ 	include('signup.php');
+?>
+
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/main.css">
-
-
-<script type="text/javascript">
-	$('#signup_btn').click(function(){
-		// if($('#cust').is(':checked'){
-			$(this).hide();
-		// }
-	});
-</script>
 
 </head>
 
 <body>
 <div class="container-fluid head-image">
 	<nav>
-		<ul class="nav justify-content-end" >
+		<?php
+		if(!$is_logged_in)
+		echo '<ul class="nav justify-content-end" >
 			<li class="nav-item">
-				<a class="nav-link" type="button" data-toggle="modal" id="login_btn" data-target="#login">Login</a>
+				<a class="nav-link" type="button" data-toggle="modal" id="login" data-target="#login_modal">Login</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" type="button" data-toggle="modal" id="signup_btn" data-target="#signup">Signup</a>
+				<a class="nav-link" type="button" data-toggle="modal" id="signup" data-target="#signup_modal">Signup</a>
 			</li>
-		</ul>
+		</ul>';
+		
+		else 
+			echo '<ul class="nav justify-content-end" >
+			<li class="nav-item">
+				<a class="nav-link" type="button" >'.$name.'</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" type="button" id="logout">Logout</a>
+			</li>
+		</ul>'
+		?>
 	</nav>
 
 	<div class="head-text">
@@ -55,7 +69,6 @@
 <div class="row">
 
 <?php 
-$data = json_decode($data, true);
 foreach ($data as $row):
 ?>
 	<div class="col-sm-6">
@@ -64,13 +77,11 @@ foreach ($data as $row):
 		  <p class="p-card">
 		  <span class="vendor_name"><?php echo $row['company_name']; ?></span>
 		  <span class="rating"> - <?php echo $row['rating']; ?> <i class="fa fa-star" aria-hidden="true"></i></span>
-		  <br>
-		  <span class="about"><?php echo $row['about']; ?></span><br>
-		  
-		  <span class="address"><?php echo $row['vendor_address']; ?></span><br>
+		  <br><span class="about"><?php echo $row['about']; ?></span><br>
+		  <span class="address"><?php echo $row['address']; ?></span><br>
 		  <span class="cusine"><?php echo ucwords($row['cusine']); ?></span><br>
 		  </p>
-		  <button onclick="window.open('<?php echo base_url()."restaurant/".$row['vendor_id']; ?>')">Order online</button>
+		  <button onclick="window.open('<?php echo base_url()."restaurant/".$row['id']; ?>')">Order online</button>
 		</div>
 	</div>
 <?php endforeach; ?>
@@ -78,12 +89,9 @@ foreach ($data as $row):
 </div>
 <!-- card ends -->
 
-
-<?php include('login.php'); ?>
-<?php include('signup.php'); ?>
-
 </div>
 
 <?php include('footer.php'); ?>
+
 </body>
 </html>

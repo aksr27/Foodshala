@@ -11,34 +11,39 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-          <form action="/action_page.php">
+          <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+              <input type="text" class="form-control" id="rest_email" name="email" value="<?php echo $restaurant[0]['email'] ?>" hidden>
+            </div>
+            <p id="update_err"></p>
     		    <div class="form-group">
-              <label for="usr">Restaurant Name:</label>
-    		      <input type="text" class="form-control" id="name" placeholder="Enter Restaurant Name" name="email" required>
+              <label for="name">Restaurant Name:</label>
+    		      <input type="text" class="form-control" id="rest_name" placeholder="Enter Restaurant Name" name="name" required>
     		    </div>
             <div class="form-group">
-              <label for="usr">Short Description:</label>
-              <input type="text" class="form-control" id="description" placeholder="Enter Restaurant Description in short" name="email" required>
+              <label for="desc">Short Description:</label>
+              <input type="text" class="form-control" id="rest_description" placeholder="Enter Restaurant Description in short" name="desc" required>
             </div>
             <div class="form-group">
-              <label for="usr">Cusine:</label>
-              <input type="text" class="form-control" id="cusine" placeholder="Enter Restaurant Cusine" name="email" required>
+              <label for="cusine">Cusine:</label>
+              <input type="text" class="form-control" id="rest_cusine" placeholder="Enter Restaurant Cusine" name="cusine" required>
             </div>
             <div class="form-group">
-              <label for="usr">Address:</label>
-              <input type="text" class="form-control" id="address" placeholder="Updated Address" name="email" required>
+              <label for="address">Address:</label>
+              <input type="text" class="form-control" id="rest_address" placeholder="Updated Address" name="address" required>
             </div>
             <div class="form-group">
-              <label for="usr">Contact:</label>
-              <input type="text" class="form-control" id="contact" placeholder="Updated Contact" name="email" required>
+              <label for="contact">Contact:</label>
+              <input type="number" class="form-control" id="rest_contact" placeholder="Updated Contact" name="contact" required>
+              <p id="update_cont_err"></p>
             </div>
-            <div class="form-group">
-              <label for="usr">Restaurant Image:</label>
-              <input type="file" class="form-control-sm" id="email" name="email" required>
-            </div>
+            <!-- <div class="form-group">
+              <label for="restaurant_img">Restaurant Image:</label>
+              <input type="file" class="form-control-sm" id="email" name="restaurant_img" required>
+            </div> -->
             <br>
             <div>
-      		    <button type="submit" class="btn btn-primary" style="margin: auto;display: block;">Update</button>
+      		    <button id="update_btn" type="button" class="btn btn-primary" style="margin: auto;display: block;">Update</button>
             </div>
 		      </form>
         </div>

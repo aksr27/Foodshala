@@ -1,0 +1,104 @@
+.top {
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  box-shadow: 5px 9px 7px rgba(0, 0, 0, 0.3);
+}
+
+.food-card{
+	padding: 10px 80px 10px 80px;
+}
+
+.cards {
+	height: 180px; 
+	border-radius:5px;
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.18);
+	padding-left: 0px!important; 
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.card-img{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("../images/pic.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 250px;
+  height: 100%;
+  float: left;
+  margin-right: 20px;
+}
+
+.about{
+	/*padding-top: 10px;*/
+	margin-bottom: 0!important;
+	margin-top: 8px!important;
+}
+
+.cart-button{
+	position: absolute; 
+	right: 0;
+	bottom: 0;
+	height: 28%;
+	width: 30%;
+	background-color: black;
+	color: white;
+	border: none;
+  	outline: 0;
+}
+.cart-button:hover {
+  opacity: 0.7;
+}
+
+.vendor-btn{
+	background-color: black;
+	color: white;
+	border: none;
+  	outline: 0;
+	position: relative;
+	margin-top: 30px;
+	margin-left: 10%;
+	padding: 10px;
+	width: 30%;
+}
+
+.vendor-btn:hover {
+  opacity: 0.7;
+}
+
+.head-text {
+  position: absolute;
+  top: 40%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size:55px;
+  font-family: cursive;
+  position: relative;
+  color: white;
+}
+
+#qty {
+	width: 10%;
+}
+
+.card-content{
+	padding-top: 10px;
+}
+
+#remove_item{
+position: absolute;
+right: 5px;
+top:5px;
+}
+
+.remove_btn{
+font-size:20px;
+color: white;
+background-color: red;
+border: none;
+outline: 0;
+}

@@ -55,4 +55,12 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 $route['restaurant/(:num)']='home/restaurant/$1';
-$route['orders']='home/orders/';
+$route['orders/(:num)']='home/orders/$1';
+$route['login']='home/login/';
+$route['logout']='home/logout/';
+$route['signup']='home/signup/';
+$route['update_restaurant']='home/update_restaurant/';
+$route['add_item']='home/add_item/';
+$route['order_item']='home/order_item/';
+$route['delivered']='home/delivered/';
+$route['remove_item']='home/remove_item/';

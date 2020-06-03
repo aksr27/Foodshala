@@ -11,44 +11,44 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-          <form action="/action_page.php">
+          <form enctype="multipart/form-data">
             <div class="form-group">
-              <label for="usr">Food Name:</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter Restaurant Name" name="email" required>
+              <input type="text" class="form-control" id="food_id" name="food_name" value="<?php echo $restaurant[0]['id']; ?>" hidden>
+            </div>
+            <p id="err"></p>
+            <div class="form-group">
+              <label>Food Name:</label>
+              <input type="text" class="form-control" id="food_name" placeholder="Enter Food Name" name="food_name" required>
             </div>
             <div class="form-group">
-              <label for="usr">Food Description:</label>
-              <input type="text" class="form-control" id="description" placeholder="Enter Restaurant Description in short" name="email" required>
+              <label>Food Description:</label>
+              <input type="text" class="form-control" id="food_description" placeholder="Enter Food Description in short" name="food_description" required>
             </div>
             <div class="form-group">
-              <label for="usr">Price:</label>
-              <input type="text" class="form-control" id="cusine" placeholder="Enter Restaurant Cusine" name="email" required>
+              <label>Price:</label>
+              <input type="number" class="form-control" id="price" placeholder="Enter price" name="price" required>
             </div>
             <div class="form-group">
-              <label for="usr">Quantity:</label>
-              <input type="text" class="form-control" id="address" placeholder="Updated Address" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="usr">Type:</label><br>
+              <label>Type:</label><br>
             <div class="form-check-inline">
               <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="optradio" required>Veg
+                <input type="radio" class="form-check-input" value="0" name="food_type" required>Veg
               </label>
             </div>
             <div class="form-check-inline">
               <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="optradio">Non-Veg
+                <input type="radio" class="form-check-input" value="1" name="food_type">Non-Veg
               </label>
             </div>
           </div>
-            <br>
+            <!-- <br>
             <div class="form-group">
               <label for="usr">Food Image:</label>
               <input type="file" class="form-control-sm" id="email" name="email" required>
-            </div>
+            </div> -->
             <br>
             <div>
-              <button type="submit" class="btn btn-primary" style="margin: auto;display: block;">Add</button>
+              <button type="button" id="item_btn" class="btn btn-primary" style="margin: auto;display: block;">Add</button>
             </div>
           </form>
         </div>
