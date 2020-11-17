@@ -34,32 +34,6 @@ class Models extends CI_Model {
     	return $data;
     }
 
-    function login($email,$passwd,$type)
-    {
-        // log_message('debug',print_r($email,TRUE));
-        if($type=='U')
-        {
-            $sql='SELECT id, name, password from customer where email=? and password=?';
-        }
-        else if($type=='R')
-        {
-            $sql='SELECT id, name, password from vendor where email=? and password=?';
-        }
-        $query=$this->db->query($sql,array($email,$passwd));
-        $result=$query->row_array();
-        if($query->num_rows()>0)
-        {
-            $data=array('status'=>'200',
-                'data'=>$result
-            );
-        }
-        else
-        {
-            $data=array('status'=>'401',
-                'data'=>array());
-        }
-        return $data;
-    }
 
     function signup($email,$passwd,$type,$name,$contact,$address)
     {
